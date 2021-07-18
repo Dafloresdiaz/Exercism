@@ -1,11 +1,16 @@
 def convert(number):
     rain = ""
-    if number % 3 == 0:
-        rain = rain+"Pling"
-    if number % 5 == 0:
-        rain = rain+"Plang"
-    if number % 7 == 0:
-        rain = rain+"Plong"
+    factor_three = number % 3 == 0
+    factor_five = number % 5 == 0
+    factor_seven = number % 7 == 0
+     
+    if factor_three:
+        rain += "Pling"
+    if factor_five:
+        rain += "Plang"
+    if factor_seven:
+        rain += "Plong"
+    #* Check if the string is empty
     if not rain:
         return str(number)
     return rain
